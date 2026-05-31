@@ -2,10 +2,12 @@ const header = document.querySelector("[data-header]");
 const progress = document.querySelector(".scroll-progress");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".site-nav");
+const navBackdrop = document.querySelector("[data-nav-backdrop]");
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const watchedSections = [...document.querySelectorAll(".section-watch")];
 const projectCards = [...document.querySelectorAll(".project-card")];
+let scrollTicking = false;
 
 function updateScrollState() {
   const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -15,6 +17,16 @@ function updateScrollState() {
   progress.style.setProperty("--progress", `${percent}%`);
   document.documentElement.style.setProperty("--hero-drift", heroDrift.toFixed(3));
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+  scrollTicking = false;
+}
+
+function requestScrollUpdate() {
+  if (scrollTicking) {
+    return;
+  }
+
+  scrollTicking = true;
+  requestAnimationFrame(updateScrollState);
 }
 
 function closeMenu() {
@@ -33,6 +45,8 @@ navToggle.addEventListener("click", () => {
 navLinks.forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
+
+navBackdrop?.addEventListener("click", closeMenu);
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -89,8 +103,13 @@ projectCards.forEach((card) => {
   });
 });
 
-window.addEventListener("scroll", updateScrollState, { passive: true });
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
 window.addEventListener("resize", updateScrollState);
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(min-width: 981px)").matches) {
+    closeMenu();
+  }
+});
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
