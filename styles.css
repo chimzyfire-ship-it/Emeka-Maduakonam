@@ -143,7 +143,7 @@ button {
   border: 1px solid rgba(255, 250, 242, 0.28);
   border-radius: 8px;
   background: rgba(22, 18, 14, 0.68);
-  color: var(--paper-strong);
+  color: var(--ink);
   box-shadow: 0 18px 42px rgba(11, 10, 8, 0.2);
   backdrop-filter: blur(18px);
   transform: translateX(-50%);
@@ -269,7 +269,7 @@ body.menu-open .nav-backdrop {
   padding: calc(var(--header-height) + 64px) clamp(18px, 4vw, 64px) 26px;
   overflow: hidden;
   isolation: isolate;
-  color: var(--paper-strong);
+  color: var(--ink);
 }
 
 .hero-image {
@@ -427,7 +427,7 @@ body.menu-open .nav-backdrop {
 .button-secondary {
   border-color: rgba(255, 250, 242, 0.38);
   background: rgba(255, 250, 242, 0.08);
-  color: var(--paper-strong);
+  color: var(--ink);
 }
 
 .profile .button-secondary,
@@ -464,7 +464,7 @@ body.menu-open .nav-backdrop {
 
 .hero-facts strong {
   display: block;
-  color: var(--paper-strong);
+  color: var(--ink);
   font-size: clamp(1rem, 0.94rem + 0.2vw, 1.12rem);
 }
 
@@ -556,7 +556,7 @@ body.menu-open .nav-backdrop {
   padding: 16px;
   border-radius: 8px;
   background: rgba(17, 13, 10, 0.72);
-  color: var(--paper-strong);
+  color: var(--ink);
   backdrop-filter: blur(14px);
 }
 
@@ -579,7 +579,7 @@ body.menu-open .nav-backdrop {
     linear-gradient(0deg, rgba(255, 250, 242, 0.06) 1px, transparent 1px),
     var(--green-dark);
   background-size: 48px 48px;
-  color: var(--paper-strong);
+  color: var(--ink);
 }
 
 .ethnikraft-grid {
@@ -612,7 +612,7 @@ body.menu-open .nav-backdrop {
   border: 1px solid rgba(255, 250, 242, 0.22);
   border-radius: 8px;
   background: rgba(16, 40, 31, 0.76);
-  color: var(--paper-strong);
+  color: var(--ink);
   font-size: 0.86rem;
   font-weight: 900;
   backdrop-filter: blur(16px);
@@ -646,15 +646,15 @@ body.menu-open .nav-backdrop {
 }
 
 .category-strip span,
-.tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-  border: 1px solid rgba(255, 250, 242, 0.18);
-  border-radius: 8px;
-  background: rgba(255, 250, 242, 0.08);
-  color: var(--paper-strong);
+  .tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 250, 242, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 250, 242, 0.08);
+    color: var(--ink);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -685,7 +685,7 @@ body.menu-open .nav-backdrop {
 
 .ethnikraft-deep-dive h3 {
   margin-top: 18px;
-  color: var(--paper-strong);
+  color: var(--ink);
   font-size: clamp(1.18rem, 1rem + 0.55vw, 1.52rem);
   line-height: 1.12;
 }
@@ -989,7 +989,7 @@ body.menu-open .nav-backdrop {
   min-height: 74svh;
   padding: clamp(90px, 11vw, 150px) 0;
   overflow: hidden;
-  color: var(--paper-strong);
+  color: var(--ink);
   background: #070909;
 }
 
@@ -1049,7 +1049,7 @@ body.menu-open .nav-backdrop {
   border: 1px solid rgba(255, 250, 242, 0.24);
   border-radius: 8px;
   background: rgba(16, 40, 31, 0.92);
-  color: var(--paper-strong);
+  color: var(--ink);
   box-shadow: 0 20px 54px rgba(10, 8, 6, 0.28);
   backdrop-filter: blur(18px);
   transform: translateY(0);
@@ -1091,7 +1091,7 @@ body.menu-open .nav-backdrop {
     url("assets/emeka-5.jpeg");
   background-position: center;
   background-size: cover;
-  color: var(--paper-strong);
+  color: var(--ink);
 }
 
 .contact-hero::after {
@@ -1257,7 +1257,7 @@ body.menu-open .nav-backdrop {
 .message-template {
   padding: clamp(70px, 8vw, 118px) 0;
   background: #070909;
-  color: var(--paper-strong);
+  color: var(--ink);
 }
 
 .message-template-grid {
@@ -1339,7 +1339,7 @@ body.menu-open .nav-backdrop {
     background:
       linear-gradient(135deg, rgba(220, 168, 59, 0.08), transparent 44%),
       rgba(22, 18, 14, 0.96);
-    color: var(--paper-strong);
+    color: var(--ink);
     box-shadow: 0 24px 70px rgba(10, 8, 6, 0.35);
     backdrop-filter: blur(18px);
     transform: translate3d(18px, -8px, 0) scale(0.98);
