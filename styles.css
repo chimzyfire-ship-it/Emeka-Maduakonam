@@ -1,18 +1,18 @@
 :root {
-  color-scheme: light;
-  --ink: #17130f;
-  --muted: #6d665e;
-  --paper: #f8f2e9;
-  --paper-strong: #fffaf2;
-  --rust: #9b432a;
-  --rust-dark: #6d2d20;
-  --green: #315f46;
-  --green-dark: #10281f;
-  --gold: #dca83b;
-  --cream: #f4dfb8;
-  --blue: #24516a;
-  --line: rgba(23, 19, 15, 0.14);
-  --shadow: 0 22px 70px rgba(31, 22, 13, 0.18);
+  color-scheme: dark;
+  --ink: #f2efe7;
+  --muted: #a9a59c;
+  --paper: #0c0d0f;
+  --paper-strong: #141619;
+  --rust: #bb6c4b;
+  --rust-dark: #703321;
+  --green: #8aa18e;
+  --green-dark: #070909;
+  --gold: #d3a94e;
+  --cream: #e7dfd1;
+  --blue: #7d93a0;
+  --line: rgba(242, 239, 231, 0.13);
+  --shadow: 0 24px 76px rgba(0, 0, 0, 0.45);
   --header-height: 76px;
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--paper);
@@ -39,14 +39,30 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background:
-    linear-gradient(90deg, rgba(49, 95, 70, 0.045) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(155, 67, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 239, 231, 0.055) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(211, 169, 78, 0.045) 1px, transparent 1px),
     var(--paper);
   background-size: 42px 42px;
   color: var(--ink);
 }
 
+body::before {
+  position: fixed;
+  right: -120px;
+  bottom: 8vh;
+  z-index: 0;
+  width: min(560px, 72vw);
+  aspect-ratio: 1;
+  background: url("assets/grey-wolf-logo.jpeg") center / contain no-repeat;
+  content: "";
+  opacity: 0.055;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
 main {
+  position: relative;
+  z-index: 1;
   overflow-x: clip;
 }
 
@@ -135,8 +151,8 @@ button {
 }
 
 .site-header.is-scrolled {
-  border-color: rgba(23, 19, 15, 0.16);
-  background: rgba(248, 242, 233, 0.88);
+  border-color: rgba(242, 239, 231, 0.16);
+  background: rgba(12, 13, 15, 0.9);
   color: var(--ink);
 }
 
@@ -162,7 +178,7 @@ button {
 }
 
 .site-header.is-scrolled .brand span {
-  color: var(--rust);
+  color: var(--gold);
 }
 
 .brand strong {
@@ -260,8 +276,8 @@ body.menu-open .nav-backdrop {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background-image: url("assets/emeka-ethnikraft.jpg");
-  background-position: 68% 44%;
+  background-image: url("assets/emeka-5.jpeg");
+  background-position: 68% 42%;
   background-size: cover;
   transform: scale(calc(1.05 + var(--hero-drift, 0) * 0.025));
   transition: transform 120ms linear;
@@ -272,8 +288,8 @@ body.menu-open .nav-backdrop {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(10, 18, 14, 0.92) 0%, rgba(16, 40, 31, 0.76) 36%, rgba(16, 40, 31, 0.2) 70%),
-    linear-gradient(0deg, rgba(10, 9, 8, 0.74) 0%, rgba(10, 9, 8, 0.08) 58%);
+    linear-gradient(90deg, rgba(5, 6, 7, 0.94) 0%, rgba(10, 12, 13, 0.8) 38%, rgba(10, 12, 13, 0.32) 72%),
+    linear-gradient(0deg, rgba(5, 6, 7, 0.86) 0%, rgba(5, 6, 7, 0.08) 60%);
 }
 
 .hero::after {
@@ -352,7 +368,7 @@ body.menu-open .nav-backdrop {
 
 .hero-brand-row {
   display: grid;
-  grid-template-columns: 0.78fr 1.22fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -375,7 +391,7 @@ body.menu-open .nav-backdrop {
   object-fit: cover;
 }
 
-.hero-brand-row div:nth-child(2) img {
+.hero-brand-row div:nth-child(3) img {
   width: 126px;
   object-position: center;
 }
@@ -707,7 +723,7 @@ body.menu-open .nav-backdrop {
 .renax-intro,
 .renax-panel,
 .project-card {
-  background: #fffaf4;
+  background: rgba(242, 239, 231, 0.045);
 }
 
 .renax-intro {
@@ -724,8 +740,8 @@ body.menu-open .nav-backdrop {
   border: 1px solid rgba(49, 95, 70, 0.18);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(49, 95, 70, 0.12), rgba(220, 168, 59, 0.13)),
-    #f3ecdf;
+    linear-gradient(135deg, rgba(138, 161, 142, 0.14), rgba(211, 169, 78, 0.13)),
+    #101214;
 }
 
 .renax-logo-card img {
@@ -818,7 +834,7 @@ body.menu-open .nav-backdrop {
 .renax-system div {
   min-height: 230px;
   padding: clamp(22px, 2.6vw, 32px);
-  background: #f7efe3;
+  background: rgba(242, 239, 231, 0.045);
 }
 
 .renax-system span {
@@ -844,8 +860,8 @@ body.menu-open .nav-backdrop {
   border: 1px solid rgba(49, 95, 70, 0.2);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(49, 95, 70, 0.13), transparent 44%),
-    #fffaf4;
+    linear-gradient(135deg, rgba(138, 161, 142, 0.13), transparent 44%),
+    rgba(242, 239, 231, 0.045);
 }
 
 .renax-note h3 {
@@ -913,13 +929,13 @@ body.menu-open .nav-backdrop {
 }
 
 .project-card .tags span {
-  border-color: rgba(23, 19, 15, 0.1);
-  background: rgba(49, 95, 70, 0.08);
-  color: var(--green-dark);
+  border-color: rgba(242, 239, 231, 0.12);
+  background: rgba(138, 161, 142, 0.1);
+  color: var(--cream);
 }
 
 .journey {
-  background: #f2eadf;
+  background: #0f1113;
 }
 
 .journey-grid {
@@ -941,7 +957,7 @@ body.menu-open .nav-backdrop {
   padding: 28px 30px 28px 88px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 250, 244, 0.74);
+  background: rgba(242, 239, 231, 0.045);
 }
 
 .timeline article::before {
@@ -974,14 +990,14 @@ body.menu-open .nav-backdrop {
   padding: clamp(90px, 11vw, 150px) 0;
   overflow: hidden;
   color: var(--paper-strong);
-  background: #15110e;
+  background: #070909;
 }
 
 .closing-bg {
   position: absolute;
   inset: 0;
-  background-image: url("assets/emeka-founder.jpg");
-  background-position: 50% 35%;
+  background-image: url("assets/emeka-5.jpeg");
+  background-position: 50% 34%;
   background-size: cover;
   opacity: 0.28;
   filter: saturate(0.75);
@@ -1010,11 +1026,13 @@ body.menu-open .nav-backdrop {
 }
 
 .site-footer {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   padding: 24px clamp(18px, 4vw, 58px);
-  background: #15110e;
+  background: #070909;
   color: rgba(255, 250, 242, 0.72);
   font-size: 0.88rem;
 }
@@ -1069,8 +1087,8 @@ body.menu-open .nav-backdrop {
   padding: calc(var(--header-height) + 86px) 0 clamp(70px, 8vw, 116px);
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(16, 40, 31, 0.94), rgba(49, 95, 70, 0.72)),
-    url("assets/emeka-ethnikraft.jpg");
+    linear-gradient(90deg, rgba(7, 9, 9, 0.96), rgba(15, 17, 19, 0.76)),
+    url("assets/emeka-5.jpeg");
   background-position: center;
   background-size: cover;
   color: var(--paper-strong);
@@ -1216,7 +1234,7 @@ body.menu-open .nav-backdrop {
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fffaf4;
+  background: rgba(242, 239, 231, 0.045);
 }
 
 .contact-purpose-grid span {
@@ -1238,7 +1256,7 @@ body.menu-open .nav-backdrop {
 
 .message-template {
   padding: clamp(70px, 8vw, 118px) 0;
-  background: #15110e;
+  background: #070909;
   color: var(--paper-strong);
 }
 
@@ -1541,7 +1559,7 @@ body.menu-open .nav-backdrop {
     height: 44px;
   }
 
-  .hero-brand-row div:nth-child(2) img {
+  .hero-brand-row div:nth-child(3) img {
     width: 106px;
     height: 44px;
   }
@@ -1853,7 +1871,7 @@ body.menu-open .nav-backdrop {
     gap: 8px;
   }
 
-  .hero-brand-row div:nth-child(2) img {
+  .hero-brand-row div:nth-child(3) img {
     width: min(146px, 100%);
   }
 
