@@ -7,7 +7,45 @@ const navLinks = [...document.querySelectorAll(".site-nav a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const watchedSections = [...document.querySelectorAll(".section-watch")];
 const projectCards = [...document.querySelectorAll(".project-card")];
+const splash = document.querySelector("[data-splash]");
 let scrollTicking = false;
+
+function initSplash() {
+  if (!splash) {
+    document.body.classList.remove("is-loading");
+    return;
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const minimumTime = reduceMotion ? 250 : 1750;
+  const startedAt = performance.now();
+  let complete = false;
+
+  const dismiss = () => {
+    if (complete) return;
+    complete = true;
+    splash.classList.add("is-done");
+    splash.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-loading");
+    window.setTimeout(() => splash.remove(), 800);
+  };
+
+  const ready = () => {
+    if (complete) return;
+    window.setTimeout(dismiss, Math.max(0, minimumTime - (performance.now() - startedAt)));
+  };
+
+  const image = splash.querySelector("img");
+  if (!image || image.complete) ready();
+  else {
+    image.addEventListener("load", ready, { once: true });
+    image.addEventListener("error", ready, { once: true });
+  }
+
+  window.setTimeout(dismiss, reduceMotion ? 900 : 3200);
+}
+
+initSplash();
 
 function updateScrollState() {
   const max = document.documentElement.scrollHeight - window.innerHeight;

@@ -11,12 +11,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/emeka-5.jpeg" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="has-contact-popout">
+  <body class="has-contact-popout is-loading">
+    <div class="splash" data-splash aria-hidden="false" role="status" aria-label="Loading Emeka Maduakonam">
+      <div class="splash-bg" aria-hidden="true">
+        <img src="assets/emeka-5.jpeg" alt="" decoding="async" fetchpriority="high" />
+      </div>
+      <div class="splash-veil" aria-hidden="true"></div>
+      <div class="splash-content">
+        <p class="splash-eyebrow">Founder · Product · Data</p>
+        <p class="splash-wordmark" aria-label="Grey Wolf">
+          <span class="splash-line" aria-hidden="true">
+            <i style="--i:0">G</i><i style="--i:1">r</i><i style="--i:2">e</i><i style="--i:3">y</i>
+          </span>
+          <span class="splash-line splash-wolf" aria-hidden="true">
+            <i style="--i:4">W</i><i style="--i:5">o</i><i style="--i:6">l</i><i style="--i:7">f</i>
+          </span>
+        </p>
+        <p class="splash-name">Emeka Maduakonam</p>
+        <span class="splash-rule" aria-hidden="true"></span>
+      </div>
+    </div>
+
     <div class="scroll-progress" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
@@ -35,6 +56,7 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
         <a href="#ethnikraft">Ethnikraft</a>
         <a href="#collaborations">Collaborations</a>
         <a href="#journey">Journey</a>
@@ -50,12 +72,11 @@
         <div class="hero-shade" aria-hidden="true"></div>
 
         <div class="hero-content reveal">
-          <p class="eyebrow">Grey Wolf . CEO . Product Design &amp; Architect</p>
-          <h1>Emeka Maduakonam</h1>
+          <p class="eyebrow">Founder · Product Design · Data Analytics</p>
+          <h1><span>Emeka</span><span>Maduakonam</span></h1>
           <p class="hero-copy">
-            A 35-year-old Nigerian CEO, Product Design &amp; Architect
-            shaping systems where culture, commerce, logistics, and software meet
-            with uncommon clarity.
+            I combine product design, business thinking, and data to build useful
+            digital products.
           </p>
           <div class="hero-actions" aria-label="Portfolio shortcuts">
             <a class="button button-primary" href="#collaborations">View Collaborations</a>
@@ -132,6 +153,49 @@
               <span>Grey Wolf. CEO, Product Design &amp; Architect, and tech enthusiast.</span>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="skills section-pad section-watch" id="skills">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Data · Product · Delivery</p>
+            <h2>Tools for clearer decisions and better products.</h2>
+            <p>Tools and methods I work with across data analysis, product insight, research, and workflow automation.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <span class="skill-number">01</span>
+              <h3>Data &amp; Analysis</h3>
+              <ul class="skill-tags" aria-label="Data analysis tools">
+                <li>SQL</li><li>MySQL</li><li>Python</li><li>Pandas</li>
+                <li>Jupyter Notebook / JupyterLab</li><li>Google Colab</li><li>Orange Data Mining</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="skill-number">02</span>
+              <h3>Analytics &amp; BI</h3>
+              <ul class="skill-tags" aria-label="Analytics and business intelligence tools">
+                <li>Microsoft Power BI</li><li>Tableau</li><li>Apache Superset</li>
+                <li>Google Lighthouse</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="skill-number">03</span>
+              <h3>Product Analytics &amp; Research</h3>
+              <ul class="skill-tags" aria-label="Product research tools and methods">
+                <li>Amplitude</li><li>Product &amp; Behavioral Analytics</li><li>Optimal Workshop</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="skill-number">04</span>
+              <h3>Automation &amp; Development</h3>
+              <ul class="skill-tags" aria-label="Automation and development tools">
+                <li>n8n Workflow Automation</li><li>GitHub</li><li>Codex</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
